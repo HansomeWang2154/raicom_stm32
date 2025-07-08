@@ -1,0 +1,13 @@
+teachingcarv02\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+teachingcarv02\heap_4.o: D:\Users\wjx\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdlib.h
+teachingcarv02\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+teachingcarv02\heap_4.o: D:\Users\wjx\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stddef.h
+teachingcarv02\heap_4.o: D:\Users\wjx\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
+teachingcarv02\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
+teachingcarv02\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+teachingcarv02\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+teachingcarv02\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+teachingcarv02\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+teachingcarv02\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+teachingcarv02\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+teachingcarv02\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
