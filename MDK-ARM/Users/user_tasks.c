@@ -107,7 +107,7 @@ uint8_t txdataTest[8] = {8,8,8,8,8,8,8,8};
 void StartTaskMid(void *argument)
 {	
 	int16_t temp = 0;
-	MOVE.motor_en = 0;
+	MOVE.motor_en = 2;
 	int test_state=0;
 	int test_round=10;
 	int test_cur = 0;

@@ -174,6 +174,8 @@ float User_MoveDouble_anglePID(void)
 																											运动学解算
 ***************************************************************************************************************************************/
 //麦轮底盘——运动学解算
+int scale_v = 2000;
+int scale_w = 2000;
 void User_Move_4W_Mecanum(void)
 {
 	switch(MOVE.ctr_type)
@@ -181,9 +183,9 @@ void User_Move_4W_Mecanum(void)
 		
 		case CTR_SLAM:
 		{
-			MOVE.spe_x = SMP.ros_stm.cmd_vx*100;
-			MOVE.spe_y = SMP.ros_stm.cmd_vy*100;
-			MOVE.spe_ang =SMP.ros_stm.cmd_womiga*100; 
+			MOVE.spe_x = SMP.ros_stm.cmd_vx*scale_v;
+			MOVE.spe_y = SMP.ros_stm.cmd_vy*scale_v;
+			MOVE.spe_ang =SMP.ros_stm.cmd_womiga*scale_w; 
 		}break;
 
 		case CTR_REMOTE:
@@ -290,7 +292,7 @@ void User_MoveOdomCal(void)
  MOVE.odometer.v_linear_x = (MOTOR_3508[0].spe_now + MOTOR_3508[1].spe_now - MOTOR_3508[2].spe_now -MOTOR_3508[3].spe_now)*0.603217158*_SPEED_RATIO/1000;
  MOVE.odometer.v_linear_y = (MOTOR_3508[0].spe_now - MOTOR_3508[1].spe_now +MOTOR_3508[2].spe_now- MOTOR_3508[3].spe_now)*0.603217158*_SPEED_RATIO/1000;
 
-float	odom_k =1;
+float	odom_k =1.5;
 
 	temp_x +=  (MOVE.odometer.v_linear_y*User_Math_FastCos(MOVE.odometer.ang_rad)+MOVE.odometer.v_linear_x*User_Math_FastSin(MOVE.odometer.ang_rad))/1000/odom_k; //v*1000*0.002s*cos(ang)--mm
 	temp_y +=  (MOVE.odometer.v_linear_y*User_Math_FastSin(MOVE.odometer.ang_rad)-MOVE.odometer.v_linear_x*User_Math_FastCos(MOVE.odometer.ang_rad))/1000/odom_k; //--mm	
